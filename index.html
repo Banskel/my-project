@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <title>Page</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <h1>Learning HTML with mozilla's MDN web docs</h1>
+        <p>In this page are written down personal notes while learning from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Mozilla's web development guide</a></p>
+        <hr>
+        <h2>Italic, bold, underline</h2>
+        <ul>
+            <li>&lt;i&gt; for <i>italic</i></li>
+            <li>&lt;b&gt; for <b>bold</b></li>
+            <li>&lt;u&gt; for <u>underline</u> (best to only underline links)</li>
+        </ul>
+        <hr>
+        <h2>Hyperlinks</h2>
+        <p>Example: <code>&lt;a href="https://www.google.com" title="Google" target="_blank"&gt;Google&lt;/a&gt;</code></p>
+        <p><a href="https://www.google.com" title="Google" target="_blank">Google</a></p>
+        <hr>
+        <h2>Document fragments</h2>
+        <p>Jump to a specific element on the page with an id attribute, by adding # in front of the attribute value of an href</p>
+        <p>Example: <code>&lt;a href="#IBU"&gt;</code></p>
+        <ul>
+            <li><a href="#Abbreviations">Abbreviations</a></li>
+            <li><a href="#Computercode">Computer code</a></li>
+            <li><a href="#HLE">HTML layout elements</a></li>
+            <li><a href="#PASW">Planning a simple website</a></li>
+            <li><a href="#A&V">Audio and video</a></li>
+            <li><a href="#F">Forms</a></li>
+        </ul>
+        <hr>
+        <h2>E-mail links</h2>
+        <p>Example: <code>&lt;a href="mailto:nowhere@mozilla.org?cc=name2@mail.com&amp;bcc=name3@mail.com&amp;subject=The%20subject%20of%20the%20email&amp;body=The%20body%20of%20the%20email"&gt;E-mail (opens mail app)&lt;/a&gt;</code></p>
+        <a href="mailto:nowhere@mozilla.org?cc=name2@mail.com&bcc=name3@mail.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email)">E-mail (opens mail app)</a>
+        <hr>
+        <h2>Description lists</h2>
+        <p>Could be used for terms and definitions, or questions and answers.</p>
+        <pre><code>
+        &lt;dl&gt;
+            &lt;dt&gt;Description term&lt;/dt&gt;
+            &lt;dd&gt;Description definition&lt;/dd&gt;
+        &lt;/dl&gt;
+      </code></pre>
+        <dl>
+            <dt>Q: What is your favorite animal?</dt>
+            <dd>A: Bob</dd>
+        </dl>
+        <hr>
+        <h2>Quotations</h2>
+        <p><code>&lt;blockquote&gt;</code> with <b>cite</b> attribute</p>
+        <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"><p>The HTML Block
+        Quotation Element indicates that the enclosed text is an extended quotation.</blockquote>
+        <h3>Inline quotations with <code>&lt;q&gt;</code></h3>
+        <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q></p>
+        <h3>Citing with <code>&lt;cite&gt;</code> element</h3>
+        <p>Wrap the source or author with the cite tag</p>
+        <p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"><cite>MDN blockquote page</cite></a>: Possible block quote here</p>
+        <hr>
+        <h2 id="Abbreviations">Abbreviations</h2>
+        <p>Example: <code>&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;</code></p>
+        <abbr title="Hyptertext Markup Language">HTML</abbr>
+        <hr>
+        <h2>Contact</h2>
+        <p>Wrap <code>&lt;address&gt;</code> around the site authors contact info</p>
+        <address>
+          <p>Banskel's contact info</p>
+        </address>
+        <hr>
+        <h2>Supesrscript and subscript</h2>
+        <p>Used for dates, chemical formulae, and math equations.</p>
+        <p><code>&lt;sup&gt;</code> Today is the 11<sup>th</sup></p>
+        <p><code>&lt;sub&gt;</code> C<sub>8</sub></p>
+        <hr>
+        <h2 id="Computercode">Computer code</h2>
+        <ul>
+          <li><code>&lt;code&gt;</code> For marking up code</li>
+          <li><code>&lt;pre&gt;</code>
+            <pre>
+              For retaining whitespaces
+            </pre>
+          </li>
+          <li><code>&lt;var&gt;</code> Mark up variable names</li>
+          <li><code>&lt;kbd&gt;</code> Markup keyboard</li>
+          <li><code>&lt;samp&gt;</code> Marking up the output of a computer program</li>
+        </ul>
+        <hr>
+        <h2>Marking up time and dates</h2>
+        <p>For machine readable format</p>
+        <p><code>&lt;time datetime="2018-11-27"&gt;27 November 2018&lt;/time&gt;</code></p>
+        <time datetime="2018-11-27">27 November 2018</time>
+        <hr>
+        <h2 id="HLE">HTML layout elements</h2>
+        <ul>
+          <li><code>&lt;main&gt;</code> For content unique to the page</li>
+          <li><code>&lt;article&gt;</code> For block of related content</li>
+          <li><code>&lt;section&gt;</code> For grouping single part of the page</li>
+          <li><code>&lt;aside&gt;</code> For content not directly related to the main but can provide additional information</li>
+          <li><code>&lt;header&gt;</code> For group of introductory content</li>
+          <li><code>&lt;nav&gt;</code> For main navigation</li>
+          <li><code>&lt;footer&gt;</code> For group of end content</li>
+        </ul>
+        <hr>
+        <h2>Non semantic wrappers</h2>
+        <p><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements to wrap content or group items together</p>
+        <p>Use the <var>class</var> attribute for labeling or styling</p>
+        <hr>
+        <h2>Line breaks and horizontal rules</h2>
+        <ul>
+          <li><code>&lt;br&gt;</code> for breaks in paragraphs</li>
+          <li><code>&lt;hr&gt;</code> for line breaks in page</li>
+        </ul>
+        <hr>
+        <h2 id="PASW">Planning a simple website</h2>
+        <p><abbr title="The practice of organizing the information/content/functionality of a website so that it presents the best user experience">Information Architechture</abbr> is important for planning and launching a website</p>
+        <ol>
+          <li>Note down what you want to have common to every page.</li>
+          <li>Draw a rough sketch of what you might want the structure of each page to look like.<br>
+          What each block is going to be.</li>
+          <li>Brainstorm the content you want on your website on paper.</li>
+          <li>Sort the brainstormed ideas into groups.</li>
+          <li>Now sketch a rough sitemap, with a bubble for each page.<br>
+            The home page will be in the center with lines connected to the other pages.<br>
+            Include possible notes on how things might be presented.
+          </li>
+        </ol>
+        <hr>
+        <h2>Debugging html</h2>
+        <p>HTML is considered a permissive language. This means that the output is guaranteed regardless of syntax errors.<br>
+        The browser will markup the errors to its best ability and display the page.</p>
+        <ul>
+          <li><b>Syntax errors: </b>Spelling errors in code.</li>
+          <li><b>Logic errors: </b>Error within logic where the program runs incorrectly.</li>
+        </ul>
+        <h3>HTML validation</h3>
+        <p>To make sure your HTML or CSS is well-formed, run it through the <a href="https://validator.w3.org/" target="_blank">Markup Validation Service</a></p>
+        <p>This service goes through your markup and reports any faulty code.</p>
+        <hr>
+        <h2>Working with images</h2>
+        <p>Do not use absolute url for images. Use your own local images on the same server!</p>
+        <p>Example: <code>&lt;img src="images/wtfboom.gif"&gt;</code></p>
+        <p><a href="https://www.youtube.com/watch?v=nXLCtX1VHAE" target="_blank"><img src="images/wtfboom.gif" alt="wtfboom.gif" width="250" height="15%"></a>
+        <figcaption>Pilot from Pearl Jam - Do the Evolution</figcaption></p>
+        <h3>Figure captions</h3>
+        <p>The <code>&lt;figcaption&gt;</code> element tells browsers, and assistive technology that the caption describes the other content of the <code>&lt;figure&gt;</code> element.</p>
+        <pre><code>
+&lt;figure&gt;
+  &lt;figcaption&gt; A figure could be several images, a code snippet, audio, video, equations, a table, or something else.&lt;/figcaption&gt;
+&lt;/figure&gt;
+        </code></pre>
+        <hr>
+        <h2 id="A&V">Audio and Video</h2>
+        <p>Use <code>&lt;video&gt;</code> with <code>src</code> attribute</p>
+        <p>Or use <code>&lt;source&gt;</code>with <var>src</var> attribute nested in <code>video</code> tag</p>
+        <p>The <var>poster</var> attribute allows custom thumbnail for videos.</p>
+        <video controls width="250" poster="images/nuke.gif">
+          <source src="videos/vid.mp4" type="video/mp4">
+          <source src="videos/vid.webm" type="video/webm">
+          <track kind="captions" src="videotrack.vtt" srclang="en">
+          <p>Your browser doesn't support HTML5 video.</p>
+        </video>
+        <p>The <code>&lt;audio&gt;</code> element works similar to the video except <var>width</var>, <var>height</var> and <var>poster</var> attributes are unsupported.</p>
+        <h3>Video text tracks</h3>
+        <p><abbr title="Web Video Text Tracks Format">WebVTT</abbr> is a format for displaying timed <code>&lt;track&gt;</code> for <code>&lt;video&gt;</code> elements.</p>
+        <p>set the <var>kind</var> attribute to either subtitles, captions, or descriptions</p>
+        <hr>
+        <h2>Embedding</h2>
+        <p><code>iframes</code> allow you to imbed other documents into your current webpage.</p>
+        <p><code>&lt;iframe width="250" height="15%" src="https://www.youtube.com/embed/oEZAJls3Wmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</code></p>
+        <iframe width="250" height="15%" src="https://www.youtube.com/embed/oEZAJls3Wmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <script src="scripts/main.js"></script>
+      <p><code>embed</code> and <code>object</code> elements are used to embed external content like java applets, flash, and svg. Somewhat outdated.</p>
+      <h3>Security</h3>
+      <p></p>
+      <ul>
+        <li>Use <code>sandbox</code> attribute to wrap embedded content for security purposes, to prevent attack vectors.</li>
+        <li>Only embed when necessary.</li>
+        <li>Use HTTPS as it is the encrypted version of HTTP.</li>
+        <li>Use <abbr title="Content Security Policy">CSP</abbr> directives to configure your website and iframes from being embedded on other sites.
+      </ul>
+      <hr>
+      <h2>Vector graphics</h2>
+      <p><abbr title="Scalabale vector graphics">SVG</abbr> is great for scalable images that give a crips look, unlike raster graphics.</p>
+      <p>CSS and javascript can also edit SVG</p>
+      <code><pre>
+      &lt;svg version="1.1"
+        baseProfile="full"
+        width="250" height="15%"
+        xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;rect width="100%" height="100%" fill="black" /&gt;
+        &lt;circle cx="125" cy="70" r="60" fill="green" /&gt;
+        &lt;text x="70" y="70" font-size="30" fill="white" stroke="black"&gt;SVG text&lt;/text&gt;
+      &lt;/svg&gt;
+      </pre></code>
+      <svg version="1.1"
+     baseProfile="full"
+     width="250" height="15%"
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="black" />
+  <circle cx="125" cy="60" r="70" fill="green" />
+  <text x="70" y="70" font-size="30" fill="white" stroke="black">SVG text</text>
+</svg>
+  <p>You can also use external svg files, and link them using the <code>&lt;img&gt;</code> tag, but with this method you cannot edit the element with CSS or javascript.</p>
+    <hr>
+    <h2>Responsive Images</h2>
+    <p>In the <code>&lt;img&gt;</code> tag use <var>srcset</var> and <var>sizes</var> attribute to include additional responsive sizes for different screens.</p>
+    <code><pre>
+      &lt;img srcset="banskel-320w.jpg 320w,
+                   banskel-480w.jpg 480w,
+                   banskel-800w.jpg 800w"
+           sizes="(max-width: 320px) 280px,
+                  (max-width: 480px) 440px,
+                  800px"
+           src="banskel-800w.jpg" alt="img description"&gt;
+    </pre></code>
+    <p>You can omit the <var>sizes</var> attribute and instead edit the <var>width:</var> of the img within CSS.</p>
+    <p>Use the <code>&lt;picture&gt;</code> element to wrap a <code>&lt;source&gt;</code> tag with <var>media</var> and <var>srcset</var> attribute to serve cropped images for differnet layouts.</p>
+    <code><pre>
+&lt;picture&gt;
+  &lt;source media="(max-width: 799px)" srcset="banskel-480w-close-portrait.jpg"&gt;
+  &lt;source media="(min-width: 800px)" srcset="banskel-800w.jpg"&gt;
+  &lt;img src="banskel-800w.jpg" alt="banskel standing up holding his daughter tomatoisland"&gt;
+&lt;/picture&gt;
+    </pre></code>
+    <hr>
+    <h2>Tables</h2>
+    <p>Content of every table is enclosed by the <code>&lt;table&gt;</code> tag</p>
+    <p>Smallest container inside a table is the <code>&lt;td&gt;</code> element.</p>
+    <p>Use the <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code> to select a colomn and preferably add a background color.
+    <p>Use the <var>scope</var> attribute in <code>&lt;th&gt;</code> to tell screenreaders what cells the header is for.</p>
+    <table border="1">
+      <caption>A simple table of grouped animals.</caption>
+      <colgroup>
+        <col>
+        <col style="background-color: yellow">
+      </colgroup>
+      <tr>
+        <th colspan="2">Animals</th>
+      </tr>
+      <tr>
+        <th colspan="2">Hippopotamus</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Horse</th>
+        <td>Mare</td>
+      </tr>
+      <tr>
+        <td>Stallion</td>
+      </tr>
+      <tr>
+        <th colspan="2">Crocodile</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Chicken</th>
+        <td>Hen</td>
+      </tr>
+      <tr>
+        <td>Rooster</td>
+      </tr>
+    </table>
+    <hr>
+    <h2 id="F">Forms</h2>
+    <p>Common form elements include <code>form</code>, <code>label</code>, <code>input</code>, <code>textarea</code>, and <code>button</code></p>
+    <form action="/my-handling-form-page" method="post">
+      <div>
+        <label for="name">Name:</label><input type="text" id="name" name="user_name">
+      </div>
+      <div>
+        <label for="mail">E-mail:</label><input type="email" id="mail" name="user_mail">
+      </div>
+      <div>
+        <label for="msg">Message:</label><textarea id="msg" name="user_message"></textarea>
+      </div>
+      <div class="button">
+        <button type="submit">Send your message</button>
+      </div>
+    </form>
+    <p>Single line text fields remove line breaks before sending data.</p>
+    <input type="email" id="email" name="email" multiple>
+    <p>Email address fields can have the <var>multiple</var> attribute to allow multiple email addresses seperated by commas.</p>
+    <input type="password" id="pwd" name="pwd">
+    <p>Password fields replace text with asterics. Secure connection (https) is recommended when sending password data.</p>
+    <input type="search" id="search" name="search">
+    <p>Search fields saves autocomplete information across pages on the same website.</p>
+  </body>
+</html>
